@@ -4,10 +4,10 @@ from supabase import create_client
 # Conexão com o PostgreSQL
 def connect_postgres():
     conn = psycopg2.connect(
-        host="localhost",    
-        database="testepython",
-        user="postgres",
-        password="bf02032020"
+        host="seu host",    
+        database="seu banco",
+        user="seu user",
+        password="sua senha"
     )
     return conn
 
@@ -21,8 +21,8 @@ def fetch_data_from_postgres(conn, query):
 
 # Conexão com o Supabase
 def connect_supabase():
-    url = "https://gjsfpzlmxihxzzoeekii.supabase.co"
-    key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imdqc2ZwemxteGloeHp6b2Vla2lpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mjc0NDAxNjgsImV4cCI6MjA0MzAxNjE2OH0.IvoHUBtfY4-ZlZppLiPxQXM0JNSToWty1KxrZTzko3g"
+    url = "sua url supabase"
+    key = "sua key supabase"
     supabase = create_client(url, key)
     return supabase
 
